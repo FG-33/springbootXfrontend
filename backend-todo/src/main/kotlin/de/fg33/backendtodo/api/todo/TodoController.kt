@@ -5,6 +5,7 @@ import de.fg33.backendtodo.domain.model.todo.TodoService
 import org.springframework.web.bind.annotation.*
 
 @RestController
+@CrossOrigin("*")
 @RequestMapping("/todo")
 class TodoController(private val todoService: TodoService) {
 
