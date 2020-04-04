@@ -1,0 +1,18 @@
+<div class="todo-list-container">
+
+  <!-- new todo input -->
+    <div class="todo-input">
+        {{input type="text" placeholder="Describe Todo.." value=newTodoText enter=(action "createTodo")}}
+        <a {{on "click" this.createTodo}} class="action"> +</a>
+    </div>
+    
+  <!-- todo list -->
+  <!--<span v-for="todo in todos" v-bind:key="todo.id">
+      <todoEntry v-bind:todo=todo></todoEntry>                
+  </span>-->
+    {{#each this.todos as |todo|}}
+    <span>
+      <TodoList::TodoEntry::TodoEntry @todo={{todo}}/>                
+  </span>
+  {{/each}}
+</div>

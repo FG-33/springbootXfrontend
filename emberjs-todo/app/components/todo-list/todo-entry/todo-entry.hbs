@@ -1,0 +1,15 @@
+<div class="todo-item">
+    <!-- todo info -->
+    <label>
+        {{input type="checkbox" checked=@todo.isDone click=(action "changeStatusOfTodo")}}
+    </label>
+
+    {{#if this.editing}}
+        {{input id=@todo.id type="text" value=newText enter=(action "changeTextOfTodo") escape-press=(action "toggleEdit")}}
+    {{else}}            
+        <span {{on "dblclick" this.toggleEdit}}>{{ @todo.text }}</span>
+    {{/if}}
+
+    <!-- actions -->
+    <a class="action" {{on "click" this.deleteTodo }}> x</a>                  
+</div>
