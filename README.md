@@ -23,3 +23,14 @@ Includes:
 - Central **state** management (vuex)
 - **HTTP** requests (axios)
 - Notifications/**Toasts** (vue-toastr)
+
+#### emberjs
+
+Includes:
+
+- Ember **Routing**
+- Modular architecture (multiple **componentes**)
+- Octane
+- Central **state** management (ember-redux[ember data as alternative?])
+- **HTTP** requests (axios)
+- No notifcations/Toasts (ember-toastr?[needs jquery and cannot be used in plain js file easily..])
