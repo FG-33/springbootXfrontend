@@ -34,3 +34,13 @@ Includes:
 - Central **state** management (ember-redux[ember data as alternative?])
 - **HTTP** requests (axios)
 - No notifcations/Toasts (ember-toastr?[needs jquery and cannot be used in plain js file easily..])
+
+#### angular2+
+
+Includes:
+
+- Angular **Routing**
+- Modular architecture (multiple **componentes**)
+- Central **state** management (ngxs)
+- **HTTP** requests (angular native http client)
+- Notifcations/Toasts (ngx-toastr)
