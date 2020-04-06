@@ -1,0 +1,14 @@
+<div class="todo-item" *ngIf="todo">
+    <!-- todo info -->
+    <label>
+        <input type="checkbox" [ngModel]="todo.isDone" (click)="changeStatusOfTodo()" />
+    </label>
+
+    <span *ngIf="!editing" (dblclick)="toggleEdit()">{{todo.text}}</span>
+    <input id="{{todo.id}}" *ngIf="editing" type="text" [(ngModel)]="newText" 
+      (keydown.enter)="changeTextOfTodo()" 
+      (keydown.esc)="toggleEdit()"/>
+
+    <!-- actions -->
+    <a class="action" (click)="deleteTodo(todo.id)"> x</a>                  
+</div>

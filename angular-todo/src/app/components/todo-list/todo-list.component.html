@@ -1,0 +1,19 @@
+<div>
+  <a style="position: absolute;top:15px;right:15px" href="/help">Help</a>
+  <h1 class="header">Things to do</h1>
+  
+  <div class="todo-list-container">
+	
+    <!-- new todo input -->
+		<div class="todo-input">
+			<input type="text" placeholder="Describe Todo.." [(ngModel)]="newTodoText" (keydown.enter)="createTodo()"/>
+			<a class="action" (click)="createTodo()"> +</a>
+		</div>
+		
+    <!-- todo list -->
+    <span *ngFor="let todo of todos">
+      <todo-entry [todo]=todo></todo-entry>                
+    </span>
+  </div>
+
+</div>
